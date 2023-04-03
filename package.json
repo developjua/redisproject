@@ -1,0 +1,21 @@
+{
+  "name": "redis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^12.0.4"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "mysql2": "^3.2.0",
+    "redis": "^4.6.5",
+    "util": "^0.12.5"
+  }
+}

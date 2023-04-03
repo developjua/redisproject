@@ -1,0 +1,36 @@
+
+service: redis
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  environment:
+    HOST: localhost
+    USER : root
+    DATABASE: project_database
+    PASSWORD: sck
+    PORT: 6379
+
+
+
+functions:
+  addpost:
+    handler: handlers/addpost.handler
+    events:
+      - httpApi:
+          path: /addpost
+          method: POST
+  getpost:
+    handler: handlers/getpost.handler
+    events:
+      - httpApi:
+         path: /getblog
+         method: GET
+        
+  
+
+plugins:
+ - serverless-offline
